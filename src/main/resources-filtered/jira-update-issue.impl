@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<implementation:connectorImplementation xmlns:implementation="http://www.bonitasoft.org/ns/connector/implementation/6.0">
+  <implementationId>${jira-update-issue.impl.id}</implementationId>
+  <implementationVersion>${jira-update-issue.impl.version}</implementationVersion>
+  <definitionId>${jira-update-issue.def.id}</definitionId>
+  <definitionVersion>${jira-update-issue.def.version}</definitionVersion>
+  <implementationClassname>${jira-update-issue.main-class}</implementationClassname>
+  <hasSources>false</hasSources>
+  <description>JIRA Update Issue connector implementation</description>
+
+<!-- retrieved from the pom.xml at build time -->
+${connector-dependencies}
+
+</implementation:connectorImplementation>

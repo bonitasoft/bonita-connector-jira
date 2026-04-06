@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<implementation:connectorImplementation xmlns:implementation="http://www.bonitasoft.org/ns/connector/implementation/6.0">
+  <implementationId>${jira-add-comment.impl.id}</implementationId>
+  <implementationVersion>${jira-add-comment.impl.version}</implementationVersion>
+  <definitionId>${jira-add-comment.def.id}</definitionId>
+  <definitionVersion>${jira-add-comment.def.version}</definitionVersion>
+  <implementationClassname>${jira-add-comment.main-class}</implementationClassname>
+  <hasSources>false</hasSources>
+  <description>JIRA Add Comment connector implementation</description>
+
+<!-- retrieved from the pom.xml at build time -->
+${connector-dependencies}
+
+</implementation:connectorImplementation>

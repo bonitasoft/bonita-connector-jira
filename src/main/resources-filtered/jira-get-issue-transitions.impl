@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<implementation:connectorImplementation xmlns:implementation="http://www.bonitasoft.org/ns/connector/implementation/6.0">
+  <implementationId>${jira-get-issue-transitions.impl.id}</implementationId>
+  <implementationVersion>${jira-get-issue-transitions.impl.version}</implementationVersion>
+  <definitionId>${jira-get-issue-transitions.def.id}</definitionId>
+  <definitionVersion>${jira-get-issue-transitions.def.version}</definitionVersion>
+  <implementationClassname>${jira-get-issue-transitions.main-class}</implementationClassname>
+  <hasSources>false</hasSources>
+  <description>JIRA Get Issue Transitions connector implementation</description>
+
+<!-- retrieved from the pom.xml at build time -->
+${connector-dependencies}
+
+</implementation:connectorImplementation>

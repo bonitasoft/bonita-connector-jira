@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<implementation:connectorImplementation xmlns:implementation="http://www.bonitasoft.org/ns/connector/implementation/6.0">
+  <implementationId>${jira-create-confluence-page.impl.id}</implementationId>
+  <implementationVersion>${jira-create-confluence-page.impl.version}</implementationVersion>
+  <definitionId>${jira-create-confluence-page.def.id}</definitionId>
+  <definitionVersion>${jira-create-confluence-page.def.version}</definitionVersion>
+  <implementationClassname>${jira-create-confluence-page.main-class}</implementationClassname>
+  <hasSources>false</hasSources>
+  <description>JIRA Create Confluence Page connector implementation</description>
+
+<!-- retrieved from the pom.xml at build time -->
+${connector-dependencies}
+
+</implementation:connectorImplementation>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definition:ConnectorDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:definition="http://www.bonitasoft.org/ns/connector/definition/6.1">
+  <id>${jira-get-issue.def.id}</id>
+  <version>${jira-get-issue.def.version}</version>
+  <icon>jira.png</icon>
+  <category icon="jira.png" id="JIRA"/>
+  <input name="atlassianDomain" type="java.lang.String" mandatory="true"/>
+  <input name="authMode" type="java.lang.String" mandatory="false" defaultValue="BASIC"/>
+  <input name="userEmail" type="java.lang.String" mandatory="false"/>
+  <input name="apiToken" type="java.lang.String" mandatory="false"/>
+  <input name="oauthClientId" type="java.lang.String" mandatory="false"/>
+  <input name="oauthClientSecret" type="java.lang.String" mandatory="false"/>
+  <input name="oauthRefreshToken" type="java.lang.String" mandatory="false"/>
+  <input name="connectTimeout" type="java.lang.Integer" mandatory="false" defaultValue="30000"/>
+  <input name="readTimeout" type="java.lang.Integer" mandatory="false" defaultValue="60000"/>
+  <input name="issueKey" type="java.lang.String" mandatory="true"/>
+  <input name="fields" type="java.lang.String" mandatory="false" defaultValue="*all"/>
+  <output name="issueKey" type="java.lang.String"/>
+  <output name="issueId" type="java.lang.String"/>
+  <output name="summary" type="java.lang.String"/>
+  <output name="description" type="java.lang.String"/>
+  <output name="statusName" type="java.lang.String"/>
+  <output name="statusCategory" type="java.lang.String"/>
+  <output name="priorityName" type="java.lang.String"/>
+  <output name="assigneeDisplayName" type="java.lang.String"/>
+  <output name="assigneeAccountId" type="java.lang.String"/>
+  <output name="reporterDisplayName" type="java.lang.String"/>
+  <output name="issueTypeName" type="java.lang.String"/>
+  <output name="projectKey" type="java.lang.String"/>
+  <output name="labels" type="java.lang.String"/>
+  <output name="created" type="java.lang.String"/>
+  <output name="updated" type="java.lang.String"/>
+  <output name="dueDate" type="java.lang.String"/>
+  <output name="resolution" type="java.lang.String"/>
+  <output name="commentCount" type="java.lang.Integer"/>
+  <output name="issueJson" type="java.lang.String"/>
+  <output name="issueUrl" type="java.lang.String"/>
+  <output name="success" type="java.lang.Boolean"/>
+  <output name="errorMessage" type="java.lang.String"/>
+  <page id="connectionPage">
+    <widget xsi:type="definition:Text" id="atlassianDomainWidget" inputName="atlassianDomain"/>
+    <widget xsi:type="definition:Select" id="authModeWidget" inputName="authMode"><items>BASIC</items><items>OAUTH2</items></widget>
+    <widget xsi:type="definition:Text" id="userEmailWidget" inputName="userEmail"/>
+    <widget xsi:type="definition:Password" id="apiTokenWidget" inputName="apiToken"/>
+    <widget xsi:type="definition:Text" id="oauthClientIdWidget" inputName="oauthClientId"/>
+    <widget xsi:type="definition:Password" id="oauthClientSecretWidget" inputName="oauthClientSecret"/>
+    <widget xsi:type="definition:Password" id="oauthRefreshTokenWidget" inputName="oauthRefreshToken"/>
+    <widget xsi:type="definition:Text" id="connectTimeoutWidget" inputName="connectTimeout"/>
+    <widget xsi:type="definition:Text" id="readTimeoutWidget" inputName="readTimeout"/>
+  </page>
+  <page id="operationPage">
+    <widget xsi:type="definition:Text" id="issueKeyWidget" inputName="issueKey"/>
+    <widget xsi:type="definition:Text" id="fieldsWidget" inputName="fields"/>
+  </page>
+</definition:ConnectorDefinition>
